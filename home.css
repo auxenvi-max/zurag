@@ -1,0 +1,405 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: url(zurag2.jpg);
+  background-size: 100%;
+}
+
+/* Navbar */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: #2c2c2c;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #d4a373;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #d4a373;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  background: url("images/coffee-bg.jpg") center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+  margin-top: 80px; /* to avoid content being under fixed header on small screens */
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.btn {
+  background: #d4a373;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #b07c4f;
+}
+
+/* Menu */
+.menu {
+  padding: 80px 20px;
+  text-align: center;
+  background: #fdfdfd;
+}
+
+.menu h2 {
+  margin-bottom: 40px;
+  font-size: 32px;
+}
+
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.menu-item {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.menu-item:hover {
+  transform: scale(1.05);
+}
+
+.menu-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.menu-item h3 {
+  margin: 15px 0;
+  font-size: 22px;
+}
+
+.menu-item p {
+  padding: 0 15px 20px;
+  font-size: 15px;
+  color: #555;
+}
+
+/* About */
+.about {
+  padding: 80px 20px;
+  background: #fff3e6;
+  text-align: center;
+}
+
+.about h2 {
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+.about p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 18px;
+}
+
+/* Contact */
+.contact {
+  padding: 80px 20px;
+  background: #fdfdfd;
+  text-align: center;
+}
+
+.contact h2 {
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+/* Footer */
+footer {
+  background: #2c2c2c;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 20px;
+  }
+
+  .navbar {
+    display: none;
+    flex-direction: column;
+    background: #2c2c2c;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    padding: 20px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero-text h1 {
+    font-size: 32px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+  }
+}
+
+
+
+
+
+/* Gallery */
+.gallery {
+  padding: 80px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.gallery h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.gallery-container img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  margin: 30px auto 0;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #d4a373;
+}
+
+.contact-form button {
+  background: #d4a373;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background: #b07c4f;
+}
+
+/* Contact Info */
+.contact-info {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.contact-info p {
+  margin: 5px 0;
+}
+
+/* Responsive tweaks for gallery and contact */
+@media (max-width: 768px) {
+  .gallery-container img {
+    height: 180px;
+  }
+
+  .contact-form {
+    width: 90%;
+  }
+}
+
+
+
+
+/* GALLERY - зүүн зураг, баруун текст */
+.gallery {
+  padding: 100px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.gallery h2 {
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: #2c2c2c;
+  font-weight: 700;
+}
+
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* зураг + текст мөрөөр зэрэгцүүлнэ */
+.gallery-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  background: #fdfdfd;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+  transform: scale(1.02);
+}
+
+/* зураг */
+.gallery-item img {
+  width: 45%;
+  height: auto;
+  border-radius: 10px;
+  border: 5px solid #d4a373;
+  object-fit: cover;
+}
+
+/* текст хэсэг */
+.gallery-text {
+  width: 50%;
+  text-align: left;
+}
+
+.gallery-text h3 {
+  font-size: 24px;
+  color: #2c2c2c;
+  margin-bottom: 10px;
+}
+
+.gallery-text p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Responsive - утсан дээр зураг дээр текст дараалан гарна */
+@media (max-width: 768px) {
+  .gallery-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .gallery-item img {
+    width: 100%;
+  }
+
+  .gallery-text {
+    width: 100%;
+  }
+}
